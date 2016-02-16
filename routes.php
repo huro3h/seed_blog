@@ -14,7 +14,7 @@
 		$id = $params[2];
 	}
 
-	// 3.コントローラの呼び出し
+	// 3.コントローラの呼び出し(requireされた時点で別ページでも$---が使えるようになる)
 	require('controllers/'.$resource.'_controller.php');
 
 ?>
