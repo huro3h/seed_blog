@@ -50,9 +50,7 @@
         <!--  -->
         <?php 
           //include関数 requireと違い、えらーが出てもそのままいく
-          include('views/blogs/'. $this->action .'php');
-
-
+          include('views/blogs/'. $this->action .'.php');  //← phpの前の  . を忘れないように！
          ?>
       </div>
     </div>

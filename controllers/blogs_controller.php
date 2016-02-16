@@ -22,14 +22,27 @@
 
 
 	class BlogsController {
+
+		// プロパティ用意（クラスの中なので外から受け渡すことができない、自分で...$this）
+		// アクセス修飾子を忘れないこと！(private or public)
+		private $action = '';
+		private $resource = '';
+
+
 		public function index(){
 			// ここでモデルを呼び出す（モデルの名前はindex）
 			$blog = new Blog();
 			$blog->index();
 
+			// アクション名を設定する
+			$this->action ='index';
+
 			// ビューを呼び出すよ！
 			// require()でindexを同じように呼び出すよ！
-			require ('views/blogs/index.php');
+			
+			// ここでapp〜を呼び出す app〜に書いてある中身が使えるようになる）
+			require ('views/layout/application.php');
+			//require ('views/blogs/index.php');
 		}
 	}
 
