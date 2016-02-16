@@ -32,7 +32,7 @@
 		public function index(){
 			// ここでモデルを呼び出す（モデルの名前はindex）
 			$blog = new Blog();
-			$blog->index();
+			$viewOptions = $blog->index();
 
 			// アクション名を設定する
 			$this->action ='index';
