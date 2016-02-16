@@ -27,18 +27,18 @@
 		// アクセス修飾子を忘れないこと！(private or public)
 		private $action = '';
 		private $resource = '';
-
+		private $viewOptions ='';
 
 		public function index(){
 			// ここでモデルを呼び出す（モデルの名前はindex）
 			$blog = new Blog();
-			$viewOptions = $blog->index();
+			$this->viewOptions = $blog->index();
 
-			foreach ($viewOptions as $viewOption) {
-				echo $viewOption['id'];
-				echo $viewOption['title'];
-				echo $viewOption['created'];
-			}
+			// foreach ($this->viewOptions as $viewOption) {
+			// 	echo $viewOption['id'];
+			// 	echo $viewOption['title'];
+			// 	echo $viewOption['created'];
+			// }
 
 			// アクション名を設定する
 			$this->action ='index';
