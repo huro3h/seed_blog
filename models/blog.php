@@ -22,12 +22,13 @@
 
 
 			// 連想配列で順番にでてきたのを格納する変数
-			
+			$rtn = array;
 			while ($result = mysqli_fetch_assoc($results)) {
 				//今回表示したいのが、タイトルと日付とid
-				echo $result['id'];
-				echo $result['title'];
-				echo $result['created'];
+				$rtn [] = $result;
+
+				// 取得結果を返す
+				return $rtn;
 			}
 		}
 	}
