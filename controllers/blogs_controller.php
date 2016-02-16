@@ -23,9 +23,13 @@
 
 	class BlogsController {
 		public function index(){
-			// ここでモデルを呼び出す
+			// ここでモデルを呼び出す（モデルの名前はindex）
 			$blog = new Blog();
 			$blog->index();
+
+			// ビューを呼び出すよ！
+			// require()でindexを同じように呼び出すよ！
+			require ('views/blogs/index.php');
 		}
 	}
 
