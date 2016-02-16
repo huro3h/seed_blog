@@ -34,6 +34,12 @@
 			$blog = new Blog();
 			$viewOptions = $blog->index();
 
+			foreach ($viewOptions as $viewOption) {
+				echo $viewOption['id'];
+				echo $viewOption['title'];
+				echo $viewOption['created'];
+			}
+
 			// アクション名を設定する
 			$this->action ='index';
 
