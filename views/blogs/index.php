@@ -4,7 +4,6 @@
       foreach ($this->viewOptions as $viewOption):
        ?>
 
-
         <div class="msg">
           <p><a href="/seed_blog/blogs/show/<?php echo $viewOption['id']; ?>/"><?php echo $viewOption['title']; ?></a></p>
           <p class="day">

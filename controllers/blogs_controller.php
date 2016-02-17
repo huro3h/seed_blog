@@ -17,7 +17,7 @@
 		case 'show':
 			$controller->show();
 			break;
-			
+
 		default:
 			
 			break;
@@ -53,6 +53,15 @@
 			// ここでapp〜を呼び出す app〜に書いてある中身が使えるようになる）
 			include ('views/layout/application.php');
 			//require ('views/blogs/index.php');
+		}
+
+		public function show(){
+			$blog = new Blog();
+			$blog->show();
+
+			$this->action ='show';
+			include ('views/layout/application.php');
+
 		}
 	}
 
