@@ -14,6 +14,10 @@
 			$controller->index();
 			break;
 
+		case 'show':
+			$controller->show();
+			break;
+			
 		default:
 			
 			break;
