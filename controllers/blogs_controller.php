@@ -47,7 +47,7 @@
 			// require()でindexを同じように呼び出すよ！
 			
 			// ここでapp〜を呼び出す app〜に書いてある中身が使えるようになる）
-			require ('views/layout/application.php');
+			include ('views/layout/application.php');
 			//require ('views/blogs/index.php');
 		}
 	}
