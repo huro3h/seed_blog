@@ -15,7 +15,7 @@
 			break;
 
 		case 'show':
-			$controller->show();
+			$controller->show($id);
 			break;
 
 		default:
@@ -55,11 +55,12 @@
 			//require ('views/blogs/index.php');
 		}
 
-		public function show(){
+		public function show($id){
 			$blog = new Blog();
-			$blog->show();
+			$blog->show($id);
 
 			$this->action ='show';
+
 			include ('views/layout/application.php');
 
 		}

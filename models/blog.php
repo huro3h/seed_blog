@@ -33,8 +33,9 @@
 				return $rtn;
 		}
 
-		public function show(){
+		public function show($id){
 			echo 'モデルのshowメソッドが呼び出されました';
+			echo $id;
 		}
 
 	}

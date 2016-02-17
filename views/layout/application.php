@@ -49,7 +49,7 @@
       <div class="col-md-4 content-margin-top">
         <!--  -->
         <?php 
-          //include関数 requireと違い、えらーが出てもそのままいく
+          //include関数 requireと違い、えらーが出てもそのままいく （出力する所）
           include('views/blogs/'. $this->action .'.php');  //← phpの前の  . を忘れないように！
          ?>
       </div>
