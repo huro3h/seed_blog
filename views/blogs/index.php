@@ -2,7 +2,6 @@
         
       <?php 
       foreach ($this->viewOptions as $viewOption):
-
        ?>
 
 
@@ -15,3 +14,4 @@
           </p>
         </div>
       <?php endforeach; ?>
+
