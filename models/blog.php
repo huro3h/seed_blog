@@ -34,10 +34,20 @@
 		}
 
 		public function show($id){
-			echo 'モデルのshowメソッドが呼び出されました';
-			echo $id;
+			
+
+			$sql = 'SELECT * FROM `blogs` WHERE `id` ='. $id;
+			$results = mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));
+
+
+			// 連想配列で順番にでてきたのを格納する変数
+			// 今回取ってくるのは１件だけなのでwhile文で回す必要なし
+			$result = mysqli_fetch_assoc($results);
+			// 取得結果を返す
+			return $result;
+
 		}
 
-	}
+	
 
  ?>
