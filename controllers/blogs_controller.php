@@ -17,7 +17,10 @@
 		case 'show':
 			$controller->show($id);
 			break;
-
+		
+		case 'add':
+			$controller->add();
+			break;
 		default:
 			
 			break;
@@ -66,6 +69,15 @@
 			$this->action ='show';
 
 			//ビューを呼び出す
+			include ('views/layout/application.php');
+		}
+
+		public function add(){
+
+			// アクション名を設定する
+			$this->action ='add';
+
+			// ここでapp〜を呼び出す app〜に書いてある中身が使えるようになる）
 			include ('views/layout/application.php');
 
 		}
