@@ -43,9 +43,18 @@
 			$result = mysqli_fetch_assoc($results);
 			// 取得結果を返す
 			return $result;
-
 		}
-	}	
-	
+			public function create($post){
+			var_dump($post);
+		}
+	}
+
+
+
+
+
+
+
+
 
  ?>

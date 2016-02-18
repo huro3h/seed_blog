@@ -22,6 +22,11 @@
 			$controller->add();
 			break;
 		default:
+		
+		case 'create':
+			$controller->create($post);
+			break;
+		default:
 			
 			break;
 
@@ -80,6 +85,19 @@
 
 			// ここでapp〜を呼び出す app〜に書いてある中身が使えるようになる）
 			include ('views/layout/application.php');
+		}
+	
+
+		public function create($post){
+			$blog = new Blog();
+			$blog->create($post);
+			// $this->viewOptions = $blog->post();
+
+			// // アクション名を設定する
+			// $this->action ='post';
+
+			// //ビューを呼び出す
+			// include ('views/layout/application.php');
 
 		}
 	}
