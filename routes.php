@@ -8,10 +8,17 @@
 	$resource = $params[0];
 	$action =  $params[1];
 	$id = 0;
+	$post = array(); //←配列として受け取る
 
 	// idがあった場合は、idも取得する
 	if (isset($params[2])) {
 		$id = $params[2];
+	}
+
+	// フォームのデータ($_POST)を受け取る
+	if (isset($_POST) && !empty($_POST)) {
+		$post = $_POST;
+		var_dump($post);
 	}
 
 	// 3.コントローラの呼び出し(requireされた時点で別ページでも$---が使えるようになる)

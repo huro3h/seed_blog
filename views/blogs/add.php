@@ -1,5 +1,5 @@
         <div class="msg">
-          <form method="post" action="/see_blog/blogs/create" class="form-horizontal" role="form">
+          <form method="post" action="/seed_blog/blogs/create" class="form-horizontal" role="form">
             <div class="form-group">
               <label for="name" class="col-md-3 control-label">タイトル</label>
               <div class="col-md-9">
