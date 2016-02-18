@@ -21,11 +21,11 @@
 		case 'add':
 			$controller->add();
 			break;
-		default:
 		
 		case 'create':
 			$controller->create($post);
 			break;
+		
 		default:
 			
 			break;
@@ -91,6 +91,11 @@
 		public function create($post){
 			$blog = new Blog();
 			$blog->create($post);
+			
+			// indexへ遷移
+			header('Location: /seed_blog/blogs/index');
+			
+
 			// $this->viewOptions = $blog->post();
 
 			// // アクション名を設定する

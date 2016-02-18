@@ -44,17 +44,20 @@
 			// 取得結果を返す
 			return $result;
 		}
-			public function create($post){
-			var_dump($post);
+		
+		public function create($post){
+			
+			//$sql = 'INSERT INTO `blogs`(`title`, `body`, `delete_flag`, `created`) VALUES ("hoge","honbun",0,now())'
+			$sql = sprintf('INSERT INTO `blogs`(`title`, `body`, `delete_flag`, `created`) VALUES ("%s","%s",0,now())',
+			mysqli_real_escape_string($this->dbconnect, $post['title']),
+			mysqli_real_escape_string($this->dbconnect, $post['body'])
+			// add.php参照
+			);
+			mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));
+			// var_dump($sql);
+
+			// return値はいらない
 		}
 	}
-
-
-
-
-
-
-
-
 
  ?>

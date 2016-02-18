@@ -18,7 +18,6 @@
 	// フォームのデータ($_POST)を受け取る
 	if (isset($_POST) && !empty($_POST)) {
 		$post = $_POST;
-		var_dump($post);
 	}
 
 	// 3.コントローラの呼び出し(requireされた時点で別ページでも$---が使えるようになる)
