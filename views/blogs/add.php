@@ -14,7 +14,7 @@
             </div>
             <div class="form-group pull-right">
               <p>
-                <a href="index.html" class="btn btn-default">戻る</a>&nbsp;&nbsp;
+                <a href="/seed_blog/blogs/index" class="btn btn-default">戻る</a>&nbsp;&nbsp;
                 <a href="index.html" class="btn btn-success">投稿する</a>
               </p>
             </div>
