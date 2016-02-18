@@ -75,6 +75,7 @@
 		public function add(){
 
 			// アクション名を設定する
+			// Modelに接続する必要はないので、上記の２行は不要
 			$this->action ='add';
 
 			// ここでapp〜を呼び出す app〜に書いてある中身が使えるようになる）
