@@ -35,10 +35,8 @@
 
 		public function show($id){
 			
-
 			$sql = 'SELECT * FROM `blogs` WHERE `id` ='. $id;
 			$results = mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));
-
 
 			// 連想配列で順番にでてきたのを格納する変数
 			// 今回取ってくるのは１件だけなのでwhile文で回す必要なし

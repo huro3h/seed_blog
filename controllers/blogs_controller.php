@@ -57,14 +57,15 @@
 
 		public function show($id){
 			$blog = new Blog();
-			$blog->show($id);
 			
 			// 8, 7の結果を戻り値として返す → var_dumpで表示
 			$this->viewOptions = $blog->show($id);
 			var_dump($this->viewOptions);
 
-
+			// アクション名を設定する
 			$this->action ='show';
+
+			//ビューを呼び出す
 			include ('views/layout/application.php');
 
 		}
