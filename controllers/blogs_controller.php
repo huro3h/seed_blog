@@ -100,7 +100,7 @@
 
 		public function edit($id){
 			$blog = new Blog();
-			$blog->edit($id);
+			$this->viewOptions = $blog->edit($id);
 			// var_dump($this->viewOptions);
 
 			// アクション名を設定する
