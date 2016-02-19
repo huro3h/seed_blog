@@ -26,8 +26,11 @@
 			$controller->create($post);
 			break;
 		
+		case 'edit':
+			$controller->edit($id);
+			break;
+
 		default:
-			
 			break;
 
 	}
@@ -86,7 +89,6 @@
 			// ここでapp〜を呼び出す app〜に書いてある中身が使えるようになる）
 			include ('views/layout/application.php');
 		}
-	
 
 		public function create($post){
 			$blog = new Blog();
@@ -94,15 +96,18 @@
 			
 			// indexへ遷移
 			header('Location: /seed_blog/blogs/index');
-			
+		}
 
-			// $this->viewOptions = $blog->post();
+		public function edit($id){
+			$blog = new Blog();
+			$blog->edit($id);
+			// var_dump($this->viewOptions);
 
-			// // アクション名を設定する
-			// $this->action ='post';
+			// アクション名を設定する
+			$this->action ='edit';
 
-			// //ビューを呼び出す
-			// include ('views/layout/application.php');
+			//ビューを呼び出す
+			include ('views/layout/application.php');
 
 		}
 	}
