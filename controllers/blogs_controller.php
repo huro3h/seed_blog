@@ -17,17 +17,21 @@
 		case 'show':
 			$controller->show($id);
 			break;
-		
+
 		case 'add':
 			$controller->add();
 			break;
-		
+
 		case 'create':
 			$controller->create($post);
 			break;
-		
+
 		case 'edit':
 			$controller->edit($id);
+			break;
+
+		case 'update':
+			$controller->update($id,$post);
 			break;
 
 		default:
@@ -108,6 +112,19 @@
 
 			//ビューを呼び出す
 			include ('views/layout/application.php');
+		}
+
+		public function update($id,$post){
+			$blog = new Blog();
+			$this->viewOptions = $blog->update($id,$post);
+			// var_dump($this->viewOptions);
+
+			// アクション名を設定する
+			// $this->action ='edit';
+
+			//ビューを呼び出す
+			include ('views/layout/application.php');
+			// indexへ遷移　
 
 		}
 	}
