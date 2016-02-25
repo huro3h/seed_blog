@@ -34,6 +34,10 @@
 			$controller->update($id,$post);
 			break;
 
+		case 'delete':
+			$controller->delete($id);
+			break;
+
 		default:
 			break;
 
@@ -116,16 +120,26 @@
 
 		public function update($id,$post){
 			$blog = new Blog();
-			$this->viewOptions = $blog->update($id,$post);
+			$blog->update($id,$post);
 			// var_dump($this->viewOptions);
 
 			// アクション名を設定する
 			// $this->action ='edit';
 
-			//ビューを呼び出す
-			include ('views/layout/application.php');
-			// indexへ遷移　
+			// indexへ遷移
+			header('Location: /seed_blog/blogs/index/');
+		}
+		
+		public function delete($id){
+			$blog = new Blog();
+			$this->viewOptions = $blog->delete($id);
+			// var_dump($this->viewOptions);
 
+			// アクション名を設定する
+			// $this->action ='edit';
+
+			// indexへ遷移
+			header('Location: /seed_blog/blogs/index/');
 		}
 	}
 

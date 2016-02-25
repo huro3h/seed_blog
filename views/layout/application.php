@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Seed Blog</title>
+    <title>Seed Blog_application</title>
 
     <!-- Bootstrap -->
     <link href="/seed_blog/webroot/assets/css/bootstrap.css" rel="stylesheet">
@@ -32,8 +32,8 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html">
-                <span class="strong-title"><i class="fa fa-pencil-square-o"></i> Seed Blog</span>
+              <a class="navbar-brand" href="/seed_blog/blogs/index/">
+                <span class="strong-title"><i class="fa fa-pencil-square-o"></i> Seed Blog_application</span>
               </a>
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
